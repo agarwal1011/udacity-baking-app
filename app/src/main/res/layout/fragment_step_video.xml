@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <FrameLayout
+                android:id="@+id/playerViewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_400">
+
+            <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                    android:id="@+id/playerView"
+                    android:contentDescription="@string/cd_recipe_step_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="match_parent"
+                    android:contentDescription="@string/cd_loading_the_video"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"/>
+
+        </FrameLayout>
+
+        <TextView
+                android:id="@+id/recipe_step_description"
+                android:layout_below="@id/playerViewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_16dp"/>
+
+        <LinearLayout
+                android:layout_below="@id/recipe_step_description"
+                android:padding="@dimen/padding_16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+            <Button
+                    android:id="@+id/previous_step_btn"
+                    android:text="@string/previous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <Button
+                    android:id="@+id/next_step_btn"
+                    android:text="@string/next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

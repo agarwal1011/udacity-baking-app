@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "udacity.project.com.bakingapp"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:support-media-compat:28.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha04'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha5'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-alpha04'
+    testImplementation 'junit:junit:4.12'
+    //Espresso
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'androidx.test.espresso:espresso-contrib:3.1.1'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    implementation 'androidx.test.espresso:espresso-idling-resource:3.1.1'
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    //Exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer:r2.2.0'
+    //Lifecycle
+    implementation 'android.arch.lifecycle:extensions:1.1.0'
+    annotationProcessor 'android.arch.lifecycle:compiler:1.1.0'
+    //Room
+    implementation 'android.arch.persistence.room:runtime:1.0.0'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.0.0'
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.2'
+}

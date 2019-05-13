@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">BakingApp</string>
+    <string name="error_message">Oops! Something went wrong</string>
+    <string name="ok">OK</string>
+    <string name="servings_size">Servings: %s</string>
+    <string name="recipe_ingredients">Show ingredients</string>
+    <string name="recipe_steps">Recipe Steps</string>
+    <string name="fragment_ingredients_title">Ingredients</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="recipe_complete_message">That\'s it! Your recipe is complete!</string>
+    <string name="first_step_message">This is the first step</string>
+    <string name="appwidget_text">Baking App</string>
+    <string name="add_widget">Add widget</string>
+    <string name="cd_loading_the_recipes">Loading the recipes</string>
+    <string name="cd_loading_the_ingredients">Loading the ingredients</string>
+    <string name="cd_recipe_step_video">Recipe step video</string>
+    <string name="cd_loading_the_video">Loading the video</string>
+    <string name="no_recipes_yet">No recipes yet</string>
+</resources>
