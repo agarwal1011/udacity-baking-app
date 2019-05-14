@@ -14,8 +14,7 @@ import udacity.project.com.bakingapp.utils.BakingUtil;
 
 import java.util.ArrayList;
 
-public class RecipeDetailsActivity extends AppCompatActivity implements RecipeDetailsFragment.Callbacks,
-        RecipeStepVideoFragment.Callbacks {
+public class RecipeDetailsActivity extends AppCompatActivity implements RecipeDetailsFragment.Callbacks {
 
     public static final String EXTRA_RECIPE = "EXTRA_RECIPE";
     private RecipeDetailsViewModel mRecipeDetailsViewModel;
@@ -68,18 +67,6 @@ public class RecipeDetailsActivity extends AppCompatActivity implements RecipeDe
             setUpDetailsPage();
             return;
         }
-        if (fragment instanceof RecipeDetailsFragment) {
-            launchRecipeDetailsFragment();
-            return;
-        }
-        if (fragment instanceof RecipeIngredientsFragment) {
-            launchIngredientsFragment();
-            return;
-        }
-        if (fragment instanceof RecipeStepVideoFragment) {
-            launchStepDetailsFragment();
-            return;
-        }
     }
 
     @Override
@@ -92,15 +79,6 @@ public class RecipeDetailsActivity extends AppCompatActivity implements RecipeDe
     public void onStepClicked(Step step) {
         mRecipeDetailsViewModel.setCurrentStep(step);
         launchStepDetailsFragment();
-    }
-
-
-    @Override
-    public void onPlayNext() {
-    }
-
-    @Override
-    public void onPlayPrevious() {
     }
 
     private void setCurrentFragmentInViewModel() {
